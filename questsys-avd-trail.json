@@ -1,0 +1,221 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "hciArtifactsLocation": {
+            "value": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/HCIScripts_1.0.02627.270/HciCustomScript.ps1"
+        },
+        "customLocationId": {
+            "value": ""
+        },
+        "virtualProcessorCount": {
+            "value": null
+        },
+        "memoryMB": {
+            "value": 0
+        },
+        "maximumMemoryMB": {
+            "value": 0
+        },
+        "minimumMemoryMB": {
+            "value": 0
+        },
+        "dynamicMemoryConfig": {
+            "value": false
+        },
+        "vmInfrastructureType": {
+            "value": "Cloud"
+        },
+        "artifactsLocation": {
+            "value": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_1.0.02627.270.zip"
+        },
+        "nestedTemplatesLocation": {
+            "value": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/armtemplates/Hostpool_1.0.02627.270/nestedTemplates/"
+        },
+        "hostpoolName": {
+            "value": "QC-AzVDI-Trail"
+        },
+        "hostpoolProperties": {
+            "value": {
+                "agentUpdate": null,
+                "friendlyName": "Trial Desktops",
+                "description": "Created through the Azure Virtual Desktop extension",
+                "hostPoolType": "Personal",
+                "personalDesktopAssignmentType": "Direct",
+                "applicationGroupReferences": [
+                    "/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourcegroups/Quest-VDI/providers/Microsoft.DesktopVirtualization/applicationgroups/QC-AzVDI-Trail-DAG"
+                ],
+                "customRdpProperty": "drivestoredirect:s:;audiomode:i:0;videoplaybackmode:i:1;redirectclipboard:i:1;redirectprinters:i:1;devicestoredirect:s:;redirectcomports:i:1;redirectsmartcards:i:1;usbdevicestoredirect:s:;enablecredsspsupport:i:1;redirectwebauthn:i:1;use multimon:i:1;audiocapturemode:i:1;encode redirected video capture:i:1;camerastoredirect:s:;autoreconnection enabled:i:1;bandwidthautodetect:i:1;networkautodetect:i:1;compression:i:1;selectedmonitors:s:;singlemoninwindowedmode:i:1;screen mode id:i:2;redirected video capture encoding quality:i:0;",
+                "maxSessionLimit": 999999,
+                "loadBalancerType": "Persistent",
+                "validationEnvironment": true,
+                "ring": null,
+                "registrationInfo": null,
+                "vmTemplate": "{\"domain\":\"questsys.corp\",\"galleryImageOffer\":null,\"galleryImagePublisher\":null,\"galleryImageSKU\":null,\"imageType\":\"CustomImage\",\"customImageId\":\"/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourceGroups/Quest-Prod/providers/Microsoft.Compute/images/QCAVD_WIN11ENT-23H2\",\"namePrefix\":\"AVD-Trail\",\"osDiskType\":\"StandardSSD_LRS\",\"vmSize\":{\"id\":\"Standard_NV4as_v4\",\"cores\":4,\"ram\":14,\"rdmaEnabled\":false,\"supportsMemoryPreservingMaintenance\":false},\"galleryItemId\":null,\"hibernate\":false,\"diskSizeGB\":0,\"securityType\":\"Standard\",\"secureBoot\":false,\"vTPM\":false,\"vmInfrastructureType\":\"Cloud\",\"virtualProcessorCount\":null,\"memoryGB\":null,\"maximumMemoryGB\":null,\"minimumMemoryGB\":null,\"dynamicMemoryConfig\":false}",
+                "preferredAppGroupType": "Desktop",
+                "migrationRequest": null,
+                "cloudPcResource": false,
+                "startVMOnConnect": true,
+                "ssoadfsAuthority": null,
+                "ssoClientId": null,
+                "ssoClientSecretKeyVaultPath": null,
+                "ssoSecretType": null,
+                "objectId": "2436ed9d-050b-4d2a-add7-56321d233a44"
+            }
+        },
+        "hostpoolResourceGroup": {
+            "value": "Quest-VDI"
+        },
+        "hostpoolLocation": {
+            "value": "westus2"
+        },
+        "hostpoolToken": {
+            "value": null
+        },
+        "vmInitialNumber": {
+            "value": 1
+        },
+        "vmResourceGroup": {
+            "value": "Quest-VDI"
+        },
+        "vmLocation": {
+            "value": "westus2"
+        },
+        "vmNamePrefix": {
+            "value": "AVD-Trail"
+        },
+        "vmNumberOfInstances": {
+            "value": 1
+        },
+        "vmSize": {
+            "value": "Standard_NV4as_v4"
+        },
+        "vmDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "vmDiskSizeGB": {
+            "value": 0
+        },
+        "vmHibernate": {
+            "value": false
+        },
+        "availabilityOption": {
+            "value": "AvailabilityZone"
+        },
+        "availabilitySetName": {
+            "value": ""
+        },
+        "createAvailabilitySet": {
+            "value": false
+        },
+        "availabilitySetUpdateDomainCount": {
+            "value": 5
+        },
+        "availabilitySetFaultDomainCount": {
+            "value": 2
+        },
+        "availabilityZones": {
+            "value": [
+                1
+            ]
+        },
+        "securityType": {
+            "value": "Standard"
+        },
+        "secureBoot": {
+            "value": false
+        },
+        "vTPM": {
+            "value": false
+        },
+        "managedDiskSecurityEncryptionType": {
+            "value": "VMGuestStateOnly"
+        },
+        "integrityMonitoring": {
+            "value": false
+        },
+        "vmImageType": {
+            "value": "CustomImage"
+        },
+        "bootDiagnostics": {
+            "value": {
+                "enabled": true
+            }
+        },
+        "customConfigurationScriptUrl": {
+            "value": ""
+        },
+        "virtualNetworkResourceGroupName": {
+            "value": "Quest-Prod"
+        },
+        "existingVnetName": {
+            "value": "Quest-Prod"
+        },
+        "existingSubnetName": {
+            "value": "VDI"
+        },
+        "createNetworkSecurityGroup": {
+            "value": false
+        },
+        "aadJoin": {
+            "value": false
+        },
+        "intune": {
+            "value": false
+        },
+        "administratorAccountUsername": {
+            "value": "srv_viewconnection@questsys.corp"
+        },
+        "administratorAccountPassword": {
+            "value": null
+        },
+        "domain": {
+            "value": "questsys.corp"
+        },
+        "ouPath": {
+            "value": "OU=Azure Virtual Desktop,OU=VDI FVM,OU=Computers,OU=US,DC=questsys,DC=corp"
+        },
+        "vmAdministratorAccountUsername": {
+            "value": "questadmin"
+        },
+        "vmAdministratorAccountPassword": {
+            "value": null
+        },
+        "networkInterfaceTags": {
+            "value": {
+                "cm-resource-parent": "/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourcegroups/Quest-VDI/providers/Microsoft.DesktopVirtualization/hostpools/QC-AzVDI-Trail"
+            }
+        },
+        "networkSecurityGroupTags": {
+            "value": {
+                "cm-resource-parent": "/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourcegroups/Quest-VDI/providers/Microsoft.DesktopVirtualization/hostpools/QC-AzVDI-Trail"
+            }
+        },
+        "availabilitySetTags": {
+            "value": {
+                "cm-resource-parent": "/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourceGroups/Quest-VDI/providers/Microsoft.DesktopVirtualization/hostpools/QC-AzVDI-Trail"
+            }
+        },
+        "virtualMachineTags": {
+            "value": {
+                "cm-resource-parent": "/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourceGroups/Quest-VDI/providers/Microsoft.DesktopVirtualization/hostpools/QC-AzVDI-Trail"
+            }
+        },
+        "deploymentId": {
+            "value": "6c090d8e-ccd7-4cde-8ec6-8c2d5fb170b9"
+        },
+        "apiVersion": {
+            "value": "2022-10-14-preview"
+        },
+        "vmCustomImageSourceId": {
+            "value": "/subscriptions/5f423fe8-9648-4aa9-9674-327056733289/resourceGroups/Quest-Prod/providers/Microsoft.Compute/images/QCAVD_WIN11ENT-23H2"
+        },
+        "systemData": {
+            "value": {
+                "aadJoinPreview": false,
+                "sessionHostConfigurationVersion": "",
+                "firstPartyExtension": false
+            }
+        }
+    }
+}
